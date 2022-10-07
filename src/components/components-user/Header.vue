@@ -1,6 +1,9 @@
 <template>
   <header class="user-header">
     <div class="useful-links">
+      <div class="menuicon">
+        <font-awesome-icon icon="fa-solid fa-bars" />
+      </div>
       <a href="#">Tallos blog</a>
       <a href="#">FAQ</a>
     </div>
@@ -34,6 +37,22 @@ export default defineComponent({
   filter: drop-shadow(2px -2px 5px #808080);
 }
 
+.useful-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.useful-links .menuicon {
+  width: 100px;
+}
+
+.menuicon svg {
+  font-size: 30px;
+  font-weight: 100;
+  cursor: pointer;
+}
+
 .useful-links a {
   padding: 3px 10px;
   border: 1px solid #009acc;
@@ -50,5 +69,6 @@ export default defineComponent({
 
 .user-header .logo-menu {
   width: 50px;
+  cursor: pointer;
 }
 </style>
