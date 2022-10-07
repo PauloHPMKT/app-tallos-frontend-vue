@@ -23,5 +23,10 @@ button {
   border-radius: 25px;
   cursor: pointer;
   box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.37);
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: #0081ac;
 }
 </style>
