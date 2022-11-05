@@ -1,18 +1,23 @@
 <template>
   <div>
     <Greeting />
-    <MenuBar />
+    <section class="dashboard_content">
+      <ManagerOverview />
+      <MenuBar />
+    </section>
   </div>
 </template>
 
 <script lang="ts">
 import Greeting from '@/components/components-user/Greeting.vue'
 import Header from '@/components/components-user/Header.vue'
+import ManagerOverview from '@/components/components-user/ManagerOverview.vue'
 import MenuBar from '@/components/components-user/MenuBar.vue'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'Dashboard',
-  components: { Header, Greeting, MenuBar },
+  components: { Header, Greeting, MenuBar, ManagerOverview },
 })
-</script>
+</script>,
+    ManagerOverview
