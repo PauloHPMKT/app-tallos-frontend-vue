@@ -14,5 +14,3 @@ export default defineComponent({
   name: 'TemplateDefault',
 })
 </script>
-
-<style lang="scss" scoped></style>
