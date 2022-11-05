@@ -1,6 +1,7 @@
 <template>
   <div>
-    Seja bem vindo a nossa plataforma!
+    <img src="/img/user.svg" alt="imagem da Tai"/>
+    <span>Seja bem vindo a nossa plataforma!</span>
   </div>
 </template>
 
