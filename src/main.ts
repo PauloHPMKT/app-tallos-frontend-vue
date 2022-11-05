@@ -10,7 +10,7 @@ import { far } from '@fortawesome/free-regular-svg-icons'
 import App from './App.vue'
 import router from './router'
 
-import './assets/main.css'
+import './assets/sass/main.scss'
 
 const app = createApp(App)
 
