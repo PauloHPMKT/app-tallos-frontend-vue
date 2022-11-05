@@ -3,5 +3,25 @@
   width: 280px;
   height: 380px;
   border-radius: 7px;
+  color: #fff;
   @include align-elements(flex, center, center);
+
+  .content_card {
+    text-align: center;
+    padding: 30px 50px; 
+
+    svg {
+      font-size: 100px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    span {
+      font-size: 40px;
+    }
+  }
 }
