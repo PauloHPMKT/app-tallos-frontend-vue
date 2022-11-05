@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <main>
+  <main class="container_template">
     <router-view />
   </main>
 </template>
@@ -14,3 +14,5 @@ export default defineComponent({
   name: 'TemplateDefault',
 })
 </script>
+
+<style lang="scss" scoped></style>
