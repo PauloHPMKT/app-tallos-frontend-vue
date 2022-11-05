@@ -2,7 +2,10 @@
 @import './partials/base';
 @import './mixins/position';
 
-
 //structure files
 @import './partials/components/template';
 @import './partials/components/greeting';
+@import './partials/components/dashboard';
+
+//components styles
+@import './partials/components/cards/card-dashboard';
