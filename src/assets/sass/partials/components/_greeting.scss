@@ -1,0 +1,3 @@
+.greeting_content {
+  @include align-elements(flex, flex-start, center);
+}

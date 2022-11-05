@@ -1,6 +1,8 @@
 //config files
 @import './partials/base';
+@import './mixins/position';
 
 
 //structure files
 @import './partials/components/template';
+@import './partials/components/greeting';
