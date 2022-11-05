@@ -1,6 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Login from '../pages/Login.vue'
-import Dashboard from '../pages/user/Dashboard.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,15 +6,16 @@ const router = createRouter({
     {
       path: '/login',
       name: 'login',
-      component: Login
+      component: () => import('../pages/Login.vue'),
     },
     {
       path: '/app',
+      component: () => import('../layout/TemplateDefault.vue'),
       children: [
         {  
           path: 'admin',
           name: 'Dashboard',
-          component: Dashboard,
+          component: () => import('../pages/user/Dashboard.vue'),
         }
       ]
     }
