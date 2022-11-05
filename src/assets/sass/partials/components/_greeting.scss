@@ -1,3 +1,13 @@
 .greeting_content {
   @include align-elements(flex, flex-start, center);
+  padding: 30px 0 50px 0;
+
+  img {
+    width: 90px;
+  }
+
+  h3 {
+    margin-left: 20px;
+    font-weight: 500;
+  }
 }
