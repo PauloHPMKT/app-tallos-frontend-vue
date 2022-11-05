@@ -1,6 +1,8 @@
 <template>
   <div class="card_bashboard">
-    Aqui vai os cards do usuario viu
+    <div>
+      teste
+    </div>
   </div>
 </template>
 
