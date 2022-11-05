@@ -1,15 +1,16 @@
 <template>
   <div>
-    Dashboard de usuario logado
+    <Greeting />
   </div>
 </template>
 
 <script lang="ts">
+import Greeting from '@/components/components-user/Greeting.vue'
 import Header from '@/components/components-user/Header.vue'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'Dashboard',
-  components: { Header },
+  components: { Header, Greeting },
 })
 </script>
