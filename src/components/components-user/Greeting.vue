@@ -1,7 +1,7 @@
 <template>
   <div class="greeting_content">
     <img src="/img/user.svg" alt="imagem da Tai"/>
-    <span>Seja bem vindo a nossa plataforma!</span>
+    <span>Boa tarde Fulano, seja bem vindo a nossa plataforma!</span>
   </div>
 </template>
 
