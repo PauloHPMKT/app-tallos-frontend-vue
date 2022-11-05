@@ -1,8 +1,7 @@
 <template>
-  <Header />
-    <main>
-      ola
-    </main>
+  <div>
+    Dashboard de usuario logado
+  </div>
 </template>
 
 <script lang="ts">
