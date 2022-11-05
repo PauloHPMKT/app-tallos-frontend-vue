@@ -1,3 +1,7 @@
 .card_bashboard {
   background-color: #3682B4;
+  width: 280px;
+  height: 380px;
+  border-radius: 7px;
+  @include align-elements(flex, center, center);
 }

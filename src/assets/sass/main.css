@@ -26,7 +26,8 @@ a {
 }
 
 .meneger_card {
-  background-color: red;
+  padding: 40px;
+  width: 50%;
 }
 
 .greeting_content {
@@ -60,5 +61,17 @@ a {
 
 .card_bashboard {
   background-color: #3682B4;
+  width: 280px;
+  height: 380px;
+  border-radius: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */
