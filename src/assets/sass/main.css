@@ -26,6 +26,9 @@ a {
 }
 
 .meneger_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 40px;
   width: 50%;
 }
@@ -59,10 +62,52 @@ a {
   display: flex;
 }
 
+.menu_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.menu_list li {
+  border: 1px solid #c4c4c4;
+  border-radius: 7px;
+  margin: 0 5px;
+  color: #121212;
+}
+
+.menu_list li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 50px;
+}
+
+.menu_list li a svg {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
 .card_bashboard {
   background-color: #3682B4;
-  width: 280px;
-  height: 380px;
+  width: 250px;
+  height: 360px;
   border-radius: 7px;
   color: #fff;
   display: -webkit-box;
@@ -74,15 +119,18 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: .4s ease-in;
+  transition: .4s ease-in;
+  margin: 5px;
 }
 
 .card_bashboard .content_card {
   text-align: center;
-  padding: 30px 50px;
+  padding: 30px;
 }
 
 .card_bashboard .content_card svg {
-  font-size: 100px;
+  font-size: 80px;
   margin-bottom: 20px;
 }
 

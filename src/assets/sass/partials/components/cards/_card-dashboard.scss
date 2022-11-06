@@ -1,17 +1,19 @@
 .card_bashboard {
   background-color: #3682B4;
-  width: 280px;
-  height: 380px;
+  width: 250px;
+  height: 360px;
   border-radius: 7px;
   color: #fff;
   @include align-elements(flex, center, center);
+  transition: .4s ease-in; 
+  margin: 5px;
 
   .content_card {
     text-align: center;
-    padding: 30px 50px; 
+    padding: 30px;
 
     svg {
-      font-size: 100px;
+      font-size: 80px;
       margin-bottom: 20px;
     }
 

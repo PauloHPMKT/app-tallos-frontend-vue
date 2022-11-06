@@ -1,0 +1,22 @@
+.menu_list {
+  @include align-elements(flex, center, center);
+  list-style: none;
+
+  li {
+    border: 1px solid #c4c4c4;
+    border-radius: 7px;
+    margin: 0 5px;
+    color: #121212;
+    
+    a {
+      @include align-elements(flex, center, center);
+      flex-direction: column;
+      padding: 50px;
+      
+      svg {
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
