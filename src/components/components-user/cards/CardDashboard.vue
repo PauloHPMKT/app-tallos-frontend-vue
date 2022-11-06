@@ -2,7 +2,7 @@
   <div class="card_bashboard">
     <div class="content_card">
       <Icon icon="carbon:user-avatar" />
-      <p>Quantidade de usuários em nossa plataforma:</p>
+      <p>{{ data_user }}</p>
       <span>25</span>
     </div>
   </div>
@@ -13,7 +13,10 @@ import { defineComponent } from 'vue'
 import { Icon } from '@iconify/vue'
 
 export default defineComponent({
-    name: 'CardDashboard',
-    components: { Icon },
+  name: 'CardDashboard',
+  components: { Icon },
+  props: {
+    data_user: String,
+  }
 })
 </script>
