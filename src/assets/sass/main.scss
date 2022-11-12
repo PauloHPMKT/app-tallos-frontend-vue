@@ -1,14 +1,18 @@
 //config files
 @import './partials/base';
 @import './mixins/position';
+@import './mixins/inputs';
 
 //structure files
 @import './partials/components/template';
 @import './partials/components/greeting';
 @import './partials/components/dashboard';
-@import './partials/components/menu-bar';
 
 //components styles
 @import './partials/components/cards/card-dashboard';
 @import './partials/components/typography';
 @import './partials/components/form-register';
+@import './partials/components/menu-bar';
+
+//structure pages
+@import './user-report.scss';
