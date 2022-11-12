@@ -11,10 +11,12 @@
 
 //components styles
 @import './partials/components/cards/card-dashboard';
+@import './partials/components/menus/menu-sidebar';
+@import './partials/components/menus/menu-bar';
 @import './partials/components/typography';
 @import './partials/components/form-register';
-@import './partials/components/menu-bar';
 @import './partials/components/header';
+@import './partials/components/table';
 
 //structure pages
-@import './user-report.scss';
+@import './pages/user-report.scss';
