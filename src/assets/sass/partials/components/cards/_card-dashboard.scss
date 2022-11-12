@@ -7,6 +7,7 @@
   @include align-elements(flex, center, center);
   transition: .4s ease-in; 
   margin: 5px;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.274);
 
   .content_card {
     text-align: center;

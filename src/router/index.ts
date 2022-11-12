@@ -16,7 +16,13 @@ const router = createRouter({
           path: 'admin',
           name: 'Dashboard',
           component: () => import('../pages/user/Dashboard.vue'),
-        }
+        },
+        {  
+          path: 'users',
+          name: 'UsersReport',
+          component: () => import('../pages/user/UsersReport.vue'),
+        },
+
       ]
     }
   ]

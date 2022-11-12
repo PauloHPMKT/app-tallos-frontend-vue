@@ -1,14 +1,24 @@
 // page-template styles
-.container_template {
-  max-width: 1450px;
-  margin: 0 auto;
-  padding: 30px 0;
+.container_vw {
+  display: flex;
+
+  .container_template {
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+  }
 }
 
 
 //subtemplate styles
 .meneger_card {
   display: flex;
-  padding: 40px;
+  padding: 40px 0;
   width: 50%;
+}
+
+//container structure
+.dashboard_content {
+  display: flex;
 }

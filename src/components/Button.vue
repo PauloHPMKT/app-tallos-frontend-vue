@@ -24,6 +24,7 @@ button {
   cursor: pointer;
   box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.37);
   font-weight: 700;
+  transition: .2s ease-in;
 }
 
 button:hover {

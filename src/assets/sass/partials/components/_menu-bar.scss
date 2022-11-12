@@ -1,12 +1,14 @@
 .menu_list {
   @include align-elements(flex, center, center);
   list-style: none;
+  padding: 0 40px;
 
   li {
-    border: 1px solid #c4c4c4;
+    border: 1px solid #d3d2d2;
     border-radius: 7px;
-    margin: 0 5px;
+    margin: 5px;
     color: #121212;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.274);
     
     a {
       @include align-elements(flex, center, center);
