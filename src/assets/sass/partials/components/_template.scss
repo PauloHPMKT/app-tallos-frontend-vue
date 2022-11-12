@@ -1,7 +1,8 @@
 // page-template styles
 .container_vw {
   display: flex;
-
+  width: 100%;
+  
   .container_template {
     max-width: 1450px;
     margin: 0 auto;
@@ -19,6 +20,7 @@
 }
 
 //container structure
-.dashboard_content {
+.box_main_content {
   display: flex;
+  width: 100%;
 }
