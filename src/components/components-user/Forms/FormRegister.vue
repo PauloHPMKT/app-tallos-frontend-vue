@@ -2,7 +2,7 @@
   <div class="form-register-contact">
     <div class="icon-container">
       <Icon icon="mi:user-add" />
-      <span>Novo Contato</span>
+      <span>Novo Usuário</span>
     </div>
     <form @submit.prevent="handleSubmitNewUser">
       <div class="tag_form_info"> 
@@ -32,25 +32,72 @@
           <div>
             <label>Descricao</label>
             <textarea placeholder="Informacoes sobre o contato"></textarea>
-            <!--criar campo para retornar ultima matricula registrada-->
+          </div>
+          <div>
+            <label>Senha</label>
+            <input type="password" placeholder="Crie uma senha de acesso">
           </div>
         </div>
       </div>
-      <div class="tag_form_info" @click="hiddenAddressInfo"> 
-        <span>Endereco</span>
+      <div class="tag_form_info"> 
+        <span @click="hiddenAddressInfo">Endereco</span>
         <div class="inputs-container" v-if="hiddenAddress">
-          <input type="text" name="" id="">
-          <input type="text" name="" id="">
+          <div>
+            <label>Rua</label>
+            <input type="text" placeholder="Ex: Av. Beira Mar, 1010">
+          </div>
+          <div>
+            <label>Complemento</label>
+            <input type="text" placeholder="Ex: Casa, Ap, Sala">
+          </div>
+          <div>
+            <label>CEP</label>
+            <input type="text" placeholder="Ex: 00.000-000">
+          </div>
+          <div>
+            <label>Bairro</label>
+            <input type="text" placeholder="Ex: Centro">
+          </div>
+          <div>
+            <label>Cidade</label>
+            <input type="text" placeholder="Ex: Fortaleza">
+            <!--Ver possibilidade de implementar select de cidades-->
+          </div>
+          <div>
+            <label>Estado</label>
+            <input type="text" placeholder="Ex: Ceará">
+          </div>
+          <div>
+            <label>País</label>
+            <input type="text" placeholder="Ex: Brasil">
+          </div>
         </div>
       </div>
-      <div class="tag_form_info" @click="hiddenCompanyInfo"> 
-        <span>Organizacão</span>
+      <div class="tag_form_info"> 
+        <span  @click="hiddenCompanyInfo">Organizacão</span>
         <div class="inputs-container" v-if="hiddenCompany">
-          <input type="text" name="" id="">
-          <input type="text" name="" id="">
+          <div>
+            <label>Cargo</label>
+            <input type="text" placeholder="Ex: Vendedor">
+          </div>
+          <div>
+            <label>Departamento</label>
+            <input type="text" placeholder="Ex: Vendas">
+            <!--Ver a possibilidade de implementar uma collection de departamentos-->
+          </div>
+          <div>
+            <label>E-mail corporativo</label>
+            <input type="text" placeholder="Ex: email@tallos.com.br">
+          </div>
+          <div>
+            <label>Área de atuacao (Micro-setor)</label>
+            <input type="text" placeholder="Ex: Tecnologia">
+          </div>
         </div>
       </div>
-      <Button :value="'Cadastrar'"/>
+      <div class="btn-spacing">
+        <Button :value="'Cadastrar'"/>
+      </div>
     </form>
   </div>
 </template>
@@ -73,14 +120,29 @@ export default defineComponent({
   methods: {
     hiddenPersonalInfo() {
       this.hiddenPersonal = !this.hiddenPersonal
+
+      if (this.hiddenPersonal !== false) {
+        this.hiddenAddress = false
+        this.hiddenCompany = false
+      }
     },
 
     hiddenAddressInfo() {
       this.hiddenAddress = !this.hiddenAddress
+
+      if (this.hiddenAddress !== false) {
+        this.hiddenPersonal = false
+        this.hiddenCompany = false
+      }
     },
   
     hiddenCompanyInfo() {
       this.hiddenCompany = !this.hiddenCompany
+
+      if (this.hiddenCompany !== false) {
+        this.hiddenPersonal = false
+        this.hiddenAddress = false
+      }
     },
 
     handleSubmitNewUser() {
