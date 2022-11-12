@@ -25,5 +25,4 @@ export default defineComponent({
   name: 'Dashboard',
   components: { Header, Greeting, MenuBar, ManagerOverview, Typography },
 })
-</script>,
-    ManagerOverview
+</script>
