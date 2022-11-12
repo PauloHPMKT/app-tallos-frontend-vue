@@ -1,8 +1,13 @@
 <template>
   <div>
     <Typography />
-    <section class="dashboard_content">
-      <FormRegister />
+    <section class="box_main_content">
+      <div class="container-wd">
+        <FormRegister />
+      </div>
+      <div class="container-wd">
+        teste
+      </div>
     </section>
   </div>
 </template>

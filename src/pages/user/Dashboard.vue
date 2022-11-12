@@ -6,7 +6,7 @@
     <div>
       <Typography />
     </div>
-    <section class="dashboard_content">
+    <section class="box_main_content">
       <ManagerOverview />
       <MenuBar />
     </section>
