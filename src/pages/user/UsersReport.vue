@@ -5,8 +5,8 @@
       <div class="container-wd">
         <FormRegister />
       </div>
-      <div class="container-wd">
-        teste
+      <div class="table-contacts">
+        <UserTable />
       </div>
     </section>
   </div>
@@ -16,9 +16,10 @@
 import { defineComponent } from 'vue'
 import Typography from '@/components/components-user/Typography.vue'
 import FormRegister from '@/components/components-user/Forms/FormRegister.vue'
+import UserTable from '@/components/components-user/cards/UserTable.vue'
 
 export default defineComponent({
   name: 'UsersReports',
-  components: { Typography, FormRegister },
+  components: { Typography, FormRegister, UserTable },
 })
 </script>
