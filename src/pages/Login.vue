@@ -29,7 +29,7 @@
             />
           </div>
         </form>
-        <p>Tallos Negócios inteligentes</p>
+        <p>Tallos Negócios inteligentes &copy;{{ year }}</p>
       </div>
     </div>
   </main>
@@ -49,13 +49,20 @@ export default defineComponent({
         email: '',
         password: '',
       },
+      year: '',
     }
   },
 
   methods: {
-    handleSubmit(): void {
+    handleSubmit() {
       console.log(this.user)
+      alert('testando botao')
     }
+  },
+
+  created() {
+    const date = new Date() 
+    this.year = date.getFullYear().toLocaleString()
   }
 })
 </script>

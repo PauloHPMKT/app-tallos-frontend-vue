@@ -1,6 +1,11 @@
 <template>
   <div>
-    <Greeting />
+    <div>
+      <Greeting />
+    </div>
+    <div>
+      <Typography />
+    </div>
     <section class="dashboard_content">
       <ManagerOverview />
       <MenuBar />
@@ -13,11 +18,12 @@ import Greeting from '@/components/components-user/Greeting.vue'
 import Header from '@/components/components-user/Header.vue'
 import ManagerOverview from '@/components/components-user/ManagerOverview.vue'
 import MenuBar from '@/components/components-user/MenuBar.vue'
+import Typography from '@/components/components-user/Typography.vue'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'Dashboard',
-  components: { Header, Greeting, MenuBar, ManagerOverview },
+  components: { Header, Greeting, MenuBar, ManagerOverview, Typography },
 })
 </script>,
     ManagerOverview
