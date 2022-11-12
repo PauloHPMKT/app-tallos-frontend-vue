@@ -1,0 +1,23 @@
+.table-container {
+  width: 890px;
+  padding: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.274);
+  height: 70vh;
+
+  table {
+    width: 100%;
+
+    th {
+      padding: 15px 10px;
+      text-align: start;
+      font-weight: 500;
+      background-color: #cecece;
+    }
+
+    td {
+      padding: 10px 10px;
+      text-align: start;
+      color: #5e5e5e;
+    }
+  }
+}

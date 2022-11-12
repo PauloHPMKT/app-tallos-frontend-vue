@@ -8,7 +8,7 @@
     border-radius: 7px;
     margin: 5px;
     color: #121212;
-    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.274);
+    box-shadow: -2px 2px 5px $default-darkness-patern;
     
     a {
       @include align-elements(flex, center, center);
