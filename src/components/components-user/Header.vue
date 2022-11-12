@@ -1,7 +1,7 @@
 <template>
   <header class="user-header">
     <div class="useful-links">
-      <div class="menuicon">
+      <div class="menuicon" @click="$emit('toggle')">
         <font-awesome-icon icon="fa-solid fa-bars" />
       </div>
       <a href="#">Tallos blog</a>
@@ -23,11 +23,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'Header',
-  
+  emits: ['toggle'],
 })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .user-header {
   width: 100%;
   padding: 26px 80px;
@@ -46,13 +46,16 @@ export default defineComponent({
 
 .useful-links .menuicon {
   width: 100px;
+
+  svg {
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: 100;
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
 }
 
-.menuicon svg {
-  font-size: 30px;
-  font-weight: 100;
-  cursor: pointer;
-}
 
 .useful-links a {
   padding: 3px 10px;

@@ -3,7 +3,7 @@
     <nav>
       <ul class="menu_list">
         <li>
-          <router-link to="/">
+          <router-link to="/app/users">
             <Icon icon="akar-icons:people-group" />
             <span>Acessar usuários</span>  
           </router-link>
