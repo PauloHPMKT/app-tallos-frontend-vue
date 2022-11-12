@@ -1,0 +1,7 @@
+@mixin input-styles($size-wd, $inner-spacing, $font-size, $border-color, $bottom-distance) {
+  width: $size-wd;
+  padding: $inner-spacing;
+  font-size: $font-size;
+  border: 1px solid $border-color;
+  margin-bottom: $bottom-distance;
+}
