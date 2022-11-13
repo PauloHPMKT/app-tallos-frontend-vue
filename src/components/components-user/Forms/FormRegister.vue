@@ -4,38 +4,38 @@
       <Icon icon="mi:user-add" />
       <span>Novo Usuário</span>
     </div>
-    <form @submit.prevent="handleSubmitNewUser">
+    <form @submit.prevent="$emit('handleSubmit', user)">
       <div class="tag_form_info"> 
         <span @click="hiddenPersonalInfo">Informacoes Pessoais</span>
         <div class="inputs-container" v-if="hiddenPersonal">
           <div>
             <label>Nome Completo</label>
-            <input type="text" placeholder="Ex: João Carlos">
+            <input type="text" v-model="user.name" placeholder="Ex: João Carlos">
           </div>
           <div>
             <label>E-mail</label>
-            <input type="text" placeholder="Ex: meuemail@example.com">
+            <input type="text" v-model="user.email" placeholder="Ex: meuemail@example.com">
           </div>
           <div>
             <label>Contato</label>
-            <input type="text" placeholder="Ex: Somente números">
+            <input type="text" v-model="user.contact" placeholder="Ex: Somente números">
           </div>
           <div>
             <label>CPF</label>
-            <input type="text" placeholder="Ex: 000.000.000-00">
+            <input type="text" v-model="user.cpf" placeholder="Ex: 000.000.000-00">
           </div>
           <div>
             <label>Matricula</label>
-            <input type="text" placeholder="Crie uma matricula Ex: Somente números">
+            <input type="text" v-model="user.cod_user" placeholder="Crie uma matricula Ex: Somente números">
             <!--criar campo para retornar ultima matricula registrada-->
           </div>
           <div>
             <label>Descricao</label>
-            <textarea placeholder="Informacoes sobre o contato"></textarea>
+            <textarea v-model="user.description" placeholder="Informacoes sobre o contato"></textarea>
           </div>
           <div>
             <label>Senha</label>
-            <input type="password" placeholder="Crie uma senha de acesso">
+            <input type="password" v-model="user.password" placeholder="Crie uma senha de acesso">
           </div>
         </div>
       </div>
@@ -44,32 +44,32 @@
         <div class="inputs-container" v-if="hiddenAddress">
           <div>
             <label>Rua</label>
-            <input type="text" placeholder="Ex: Av. Beira Mar, 1010">
+            <input type="text" v-model="user.location.address.street" placeholder="Ex: Av. Beira Mar, 1010">
           </div>
           <div>
             <label>Complemento</label>
-            <input type="text" placeholder="Ex: Casa, Ap, Sala">
+            <input type="text" v-model="user.location.address.complement" placeholder="Ex: Casa, Ap, Sala">
           </div>
           <div>
             <label>CEP</label>
-            <input type="text" placeholder="Ex: 00.000-000">
+            <input type="text" v-model="user.location.address.zipcode" placeholder="Ex: 00.000-000">
           </div>
           <div>
             <label>Bairro</label>
-            <input type="text" placeholder="Ex: Centro">
+            <input type="text" v-model="user.location.address.neighborhood" placeholder="Ex: Centro">
           </div>
           <div>
             <label>Cidade</label>
-            <input type="text" placeholder="Ex: Fortaleza">
+            <input type="text" v-model="user.location.address.city" placeholder="Ex: Fortaleza">
             <!--Ver possibilidade de implementar select de cidades-->
           </div>
           <div>
             <label>Estado</label>
-            <input type="text" placeholder="Ex: Ceará">
+            <input type="text" v-model="user.location.address.state" placeholder="Ex: Ceará">
           </div>
           <div>
             <label>País</label>
-            <input type="text" placeholder="Ex: Brasil">
+            <input type="text" v-model="user.location.address.country" placeholder="Ex: Brasil">
           </div>
         </div>
       </div>
@@ -78,20 +78,20 @@
         <div class="inputs-container" v-if="hiddenCompany">
           <div>
             <label>Cargo</label>
-            <input type="text" placeholder="Ex: Vendedor">
+            <input type="text" v-model="user.roles" placeholder="Ex: Vendedor">
           </div>
           <div>
             <label>Departamento</label>
-            <input type="text" placeholder="Ex: Vendas">
+            <input type="text" v-model="user.dept" placeholder="Ex: Vendas">
             <!--Ver a possibilidade de implementar uma collection de departamentos-->
           </div>
           <div>
             <label>E-mail corporativo</label>
-            <input type="text" placeholder="Ex: email@tallos.com.br">
+            <input type="text" v-model="user.corporative_email" placeholder="Ex: email@tallos.com.br">
           </div>
           <div>
             <label>Área de atuacao (Micro-setor)</label>
-            <input type="text" placeholder="Ex: Tecnologia">
+            <input type="text" v-model="user.atuation_area" placeholder="Ex: Tecnologia">
           </div>
         </div>
       </div>
@@ -110,11 +110,36 @@ import Button from '@/components/Button.vue'
 export default defineComponent({
   name: 'FormRegister',  
   components: { Icon, Button },
+  emits: ['handleSubmit'],
   data() {
     return {
       hiddenPersonal: false,
       hiddenAddress: false,
       hiddenCompany: false,
+      user:{ 
+        cod_user: null,
+          name: '',
+          email: '',
+          contact: '',
+          cpf: '',
+          description: '',
+          password: '',
+          location: {
+            address: {
+              street: '',
+              complement: '',
+              zipcode: '',
+              neighborhood: '',
+              city: '',
+              state: '',
+              country: '',
+            },
+          },
+          roles: '',
+          dept: '',
+          corporative_email: '',
+          atuation_area: '',
+      }
     }
   },
   methods: {
@@ -144,10 +169,6 @@ export default defineComponent({
         this.hiddenAddress = false
       }
     },
-
-    handleSubmitNewUser() {
-      alert('teste')
-    }
   }
 })
 </script>

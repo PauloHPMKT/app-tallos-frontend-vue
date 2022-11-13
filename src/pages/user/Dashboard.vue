@@ -24,5 +24,8 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'Dashboard',
   components: { Header, Greeting, MenuBar, ManagerOverview, Typography },
+  mounted() {
+    console.log(this.$store.state)
+  }
 })
 </script>

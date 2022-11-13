@@ -3,7 +3,7 @@
     <Typography />
     <section class="box_main_content">
       <div class="container-wd">
-        <FormRegister />
+        <FormRegister @handleSubmit="submitNewUser"/>
       </div>
       <div class="table-contacts">
         <UserTable />
@@ -21,5 +21,10 @@ import UserTable from '@/components/components-user/cards/UserTable.vue'
 export default defineComponent({
   name: 'UsersReports',
   components: { Typography, FormRegister, UserTable },
+  methods: {
+    submitNewUser(data:object) {
+      console.log(data)
+    }
+  }
 })
 </script>

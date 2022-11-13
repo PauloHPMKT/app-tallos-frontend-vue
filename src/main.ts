@@ -1,5 +1,4 @@
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
 
 //importing fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -11,13 +10,16 @@ import App from './App.vue'
 import router from './router'
 
 import './assets/sass/main.scss'
+import './stores'
+import { store } from './stores'
 
 const app = createApp(App)
 
 library.add( fas, far )
 
+app.config.globalProperties.$store = store;
 app.component('font-awesome-icon', FontAwesomeIcon)
-app.use(createPinia())
+app.provide('$store', store)
 app.use(router)
 
 app.mount('#app')
