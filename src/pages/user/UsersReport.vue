@@ -29,8 +29,6 @@ export default defineComponent({
   },
 
   async mounted() {
-    console.log(this.$store.state.users)
-
     await userService.listUsers().then(res => {
       console.log(res.data)
     })
