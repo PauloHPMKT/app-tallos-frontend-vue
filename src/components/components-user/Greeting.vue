@@ -1,7 +1,7 @@
 <template>
   <div class="greeting_content">
     <img src="/img/user.svg" alt="imagem da Tai"/>
-    <h3>Boa tarde Fulano, seja bem vindo a nossa plataforma! ;)</h3>
+    <h3>Boa tarde {{ $store.state.userStore.userName.split(' ').slice(0, 2).toString().replace(',', ' ') }}, seja bem vindo(a) a plataforma Tallos! ;)</h3>
   </div>
 </template>
 
