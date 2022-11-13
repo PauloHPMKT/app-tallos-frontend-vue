@@ -22,7 +22,7 @@ export default {
         
         context.commit('LOGIN', decode)
 
-        //location.replace('/app/admin')
+        location.replace('/app/admin')
       }
     })
   }
