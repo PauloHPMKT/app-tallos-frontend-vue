@@ -11,15 +11,16 @@ import router from './router'
 
 import './assets/sass/main.scss'
 import './stores'
-import { store } from './stores'
+import store from './stores'
 
 const app = createApp(App)
 
 library.add( fas, far )
 
 app.config.globalProperties.$store = store;
-app.component('font-awesome-icon', FontAwesomeIcon)
 app.provide('$store', store)
+app.use(store)
 app.use(router)
+app.component('font-awesome-icon', FontAwesomeIcon)
 
 app.mount('#app')
