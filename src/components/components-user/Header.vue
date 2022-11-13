@@ -12,8 +12,12 @@
         <img src="/img/tallos-logo-(1).png" alt="Logo Menu principal" class="logo-menu">
       </router-link>
     </div>
-    <div>
-      card de perfil de usuario
+    <div class="card-user-container">
+      <span>{{ $store.state.userStore.userName.split(' ').slice(0, 2).toString().replace(',', ' ') }}</span>
+      <div class="icon-user">
+        <img src="/img/user.svg" alt="icone do usuario">
+        <!--implementanr logica do avatar do usuario-->
+      </div>
     </div>
   </header>
 </template>
