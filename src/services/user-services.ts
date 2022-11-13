@@ -6,5 +6,8 @@ export default {
   },
   listUsers: () => {
     return ApiService.get('/api/listusers')
+  },
+  login: (data: object) => {
+    return ApiService.post('/login', data)
   }
 }
