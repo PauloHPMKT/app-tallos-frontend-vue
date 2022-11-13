@@ -38,11 +38,29 @@
       } 
     }
   }
-
+  
   .logo-menu {
     width: 50px;
     cursor: pointer;
   }
+
+  .card-user-container {
+    @include align-elements(flex, center, center);
+    cursor: pointer;
+
+    .icon-user {
+      margin-left: 10px;
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      @include align-elements(flex, center, center);
+
+      img  {
+        width: 80%;
+      }
+    }
+  }
+
 }
 
 
