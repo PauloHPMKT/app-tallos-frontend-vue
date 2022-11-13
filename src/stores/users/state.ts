@@ -1,9 +1,9 @@
-export default {
-  users: [],
-  User: Object,
+  export default {
+  Users: [],
+  user: Object,
   Me: Object,
-  UserName: '',
-  UserEmail: '',
-  UserAvatar: '',
-  UserId: '',
+  userName: '',
+  userEmail: '',
+  userAvatar: '',
+  userId: '',
 }
