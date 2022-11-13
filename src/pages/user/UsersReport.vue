@@ -17,14 +17,23 @@ import { defineComponent } from 'vue'
 import Typography from '@/components/components-user/Typography.vue'
 import FormRegister from '@/components/components-user/Forms/FormRegister.vue'
 import UserTable from '@/components/components-user/cards/UserTable.vue'
+import userService from '@/services/user-services'
 
 export default defineComponent({
   name: 'UsersReports',
   components: { Typography, FormRegister, UserTable },
   methods: {
-    submitNewUser(data:object) {
-      console.log(data)
+    async submitNewUser(data: object) {
+      await userService.createUser(data)
     }
+  },
+
+  async mounted() {
+    console.log(this.$store.state.users)
+
+    await userService.listUsers().then(res => {
+      console.log(res.data)
+    })
   }
 })
 </script>
