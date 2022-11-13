@@ -5,7 +5,7 @@
         <div class="logo-container">
           <img src="/img/tallos-logo-(1).png" alt="logo Tallos">
         </div>
-        <form @submit.prevent="handleSubmit">
+        <form @submit.prevent="handleSubmitLogin">
           <div>
             <label for="email">Email</label>
             <input 
@@ -54,9 +54,8 @@ export default defineComponent({
   },
 
   methods: {
-    handleSubmit() {
-      console.log(this.user)
-      alert('testando botao')
+    async handleSubmitLogin() {
+      await this.$store.dispatch('userStore/login', this.user)
     }
   },
 
